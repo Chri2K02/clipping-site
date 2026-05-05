@@ -1,0 +1,1513 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><link rel="icon" type="image/png" href="logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NextWave Clippers — Go Viral. Get Paid.</title>
+  <meta property=”og:type” content=”website” />
+  <meta property=”og:title” content=”NextWave Clippers — Go Viral. Get Paid.” />
+  <meta property=”og:description” content=”Launch viral short-form video campaigns starting at $1,000. Connect with 2,400+ verified clippers on TikTok, YouTube Shorts, and Instagram Reels.” />
+  <meta property=”og:image” content=”https://nextwaveclippers.com/logo.png” />
+  <meta property=”og:site_name” content=”NextWave Clippers” />
+  <meta name=”twitter:card” content=”summary_large_image” />
+  <meta name=”twitter:title” content=”NextWave Clippers — Go Viral. Get Paid.” />
+  <meta name=”twitter:description” content=”Launch viral short-form video campaigns starting at $1,000. Connect with 2,400+ verified clippers on TikTok, YouTube Shorts, and Instagram Reels.” />
+  <meta name=”twitter:image” content=”https://nextwaveclippers.com/logo.png” />
+  <meta name=”description” content=”Launch viral short-form video campaigns starting at $1,000. Connect with 2,400+ verified clippers on TikTok, YouTube Shorts, and Instagram Reels.” />
+  <link rel=”preconnect” href=”https://fonts.googleapis.com” />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,900&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== RESET & ROOT ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:   #07080B;
+      --dark:    #0D0B12;
+      --panel:   #110F17;
+      --border:  #1A1822;
+      --mid:     #251E30;
+      --muted:   #FFFFFF;
+      --text:    #FFFFFF;
+      --white:   #FFFFFF;
+      --lime:    #8B5CF6;
+      --lime2:   #7C3AED;
+      --lime-glow: rgba(139,92,246,0.18);
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-mono:    'DM Mono', monospace;
+      --font-serif:   'Instrument Serif', serif;
+    }
+
+    /* ===== LIGHT MODE ===== */
+    html[data-theme="light"] {
+      --black:   #F7F8F5;
+      --dark:    #EEEEE9;
+      --panel:   #E5E6E1;
+      --border:  #D0D1CB;
+      --mid:     #A8A89F;
+      --muted:   #000000;
+      --text:    #000000;
+      --white:   #000000;
+      --lime-glow: rgba(109,40,217,0.08);
+    }
+    html[data-theme="light"] nav {
+      background: rgba(247,248,245,0.92);
+      box-shadow: 0 1px 0 var(--border), 0 4px 24px rgba(0,0,0,0.05);
+    }
+    html[data-theme="light"] body::before { opacity: 0.008; }
+    html[data-theme="light"] ::-webkit-scrollbar-track { background: var(--black); }
+
+    /* Smooth theme transitions */
+    body, nav, footer { transition: background-color 0.3s ease, color 0.3s ease; }
+
+    /* Override all inline lime text */
+    [style*="color:var(--lime)"],[style*="color: var(--lime)"] { color: var(--white) !important; }
+
+    /* ===== NATIVE CURSOR ===== */
+    body { cursor: auto; }
+    .cursor, .cursor-ring { display: none !important; }
+    a, button, select { cursor: pointer; }
+    input, textarea { cursor: text; }
+
+    /* ===== THEME TOGGLE ===== */
+    .theme-toggle {
+      background: none; border: 1px solid var(--border); color: var(--muted);
+      font-size: 17px; width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: border-color 0.2s, color 0.2s, background 0.2s;
+      flex-shrink: 0; line-height: 1; padding: 0;
+    }
+    .theme-toggle:hover { border-color: var(--white); color: var(--white); background: rgba(139,92,246,0.1); }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: var(--font-mono);
+      font-size: 14px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      cursor: auto;
+    }
+
+    /* ===== CUSTOM CURSOR ===== */
+    .cursor {
+      position: fixed;
+      width: 12px; height: 12px;
+      background: var(--lime);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%,-50%);
+      mix-blend-mode: screen;
+    }
+    .cursor-ring {
+      position: fixed;
+      width: 36px; height: 36px;
+      border: 1px solid var(--lime);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%,-50%);
+      opacity: 0.5;
+    }
+
+    /* ===== NOISE OVERLAY ===== */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.028;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--lime); border-radius: 2px; }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(7,8,11,0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      color: var(--white);
+      text-decoration: none;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-logo-icon { width: 32px; height: 32px; object-fit: contain; flex-shrink: 0; }
+    .nav-logo span { color: var(--white); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background: var(--lime);
+      padding: 10px 24px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .nav-cta:hover { background: var(--lime2); transform: translateY(-1px); }
+
+    /* ===== TICKER ===== */
+    .ticker-wrap {
+      margin-top: 73px;
+      background: var(--lime);
+      overflow: hidden;
+      height: 34px;
+      display: flex;
+      align-items: center;
+    }
+    .ticker-track {
+      display: flex;
+      white-space: nowrap;
+      animation: ticker 28s linear infinite;
+    }
+    .ticker-track span {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      padding: 0 28px;
+    }
+    .ticker-dot { color: rgba(255,255,255,0.4) !important; padding: 0 4px !important; }
+    @keyframes ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding: 140px 48px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.4;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 75%);
+    }
+    .hero-glow {
+      position: absolute;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, var(--lime-glow) 0%, transparent 70%);
+      top: 50%; left: 35%;
+      transform: translate(-50%,-50%);
+      pointer-events: none;
+    }
+    .hero-left {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 32px; height: 1px;
+      background: var(--lime);
+    }
+    .hero-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(72px, 9vw, 130px);
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 32px;
+    }
+    .hero-h1 em {
+      font-style: italic;
+      color: var(--white);
+    }
+    .hero-sub {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 400px;
+      line-height: 1.85;
+      margin-bottom: 44px;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background: var(--lime);
+      padding: 16px 40px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.2);
+      transform: translateX(-100%) skewX(-10deg);
+      transition: transform 0.35s ease;
+    }
+    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-primary:hover::after { transform: translateX(110%) skewX(-10deg); }
+    .btn-ghost {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: transparent;
+      padding: 15px 40px;
+      border: 1px solid var(--mid);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: border-color 0.2s, color 0.2s, transform 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--white); color: var(--white); transform: translateY(-2px); }
+
+    .hero-stats {
+      margin-top: 60px;
+      display: flex;
+      gap: 0;
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+    }
+    .hero-stat {
+      flex: 1;
+      padding-right: 32px;
+      border-right: 1px solid var(--border);
+      margin-right: 32px;
+    }
+    .hero-stat:last-child { border-right: none; margin-right: 0; }
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+    }
+    .hero-stat-num span { color: var(--white); }
+    .hero-stat-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* Hero right visual */
+    .hero-right {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-visual {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+    .phone-frame {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 36px;
+      padding: 18px;
+      box-shadow: 0 48px 100px rgba(0,0,0,0.7), 0 0 80px rgba(139,92,246,0.12);
+    }
+    .phone-notch {
+      width: 70px; height: 6px;
+      background: var(--mid);
+      border-radius: 3px;
+      margin: 0 auto 14px;
+    }
+    .phone-screen {
+      background: var(--dark);
+      border-radius: 22px;
+      overflow: hidden;
+      aspect-ratio: 9/16;
+      display: flex;
+      flex-direction: column;
+    }
+    .video-thumb {
+      flex: 1;
+      background: linear-gradient(145deg, #1a1030 0%, #0d0820 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .video-thumb::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.8) 100%);
+    }
+    .play-icon {
+      width: 56px; height: 56px;
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      animation: pulse-play 2.5s ease-in-out infinite;
+    }
+    .play-icon::after {
+      content: '';
+      width: 0; height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 16px solid white;
+      margin-left: 4px;
+    }
+    @keyframes pulse-play {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(139,92,246,0.4); border-color: rgba(255,255,255,0.5); }
+      50% { box-shadow: 0 0 0 18px rgba(139,92,246,0); border-color: var(--white); }
+    }
+    .video-bars {
+      position: absolute;
+      bottom: 16px; left: 14px; right: 14px;
+      z-index: 2;
+    }
+    .video-title-label {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 4px;
+    }
+    .view-count {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--white);
+      letter-spacing: 0.08em;
+    }
+    .phone-bottom {
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .earnings-badge {
+      background: var(--lime);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 3px;
+      letter-spacing: 0.04em;
+      animation: badge-pop 3s ease-in-out infinite;
+    }
+    @keyframes badge-pop {
+      0%, 75%, 100% { transform: scale(1); }
+      80% { transform: scale(1.07); }
+    }
+    .platform-icons { display: flex; gap: 7px; }
+    .picon {
+      width: 26px; height: 26px;
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px; font-weight: 900;
+      font-family: var(--font-display);
+    }
+    .picon.tt { background: #010101; color: white; border: 1px solid #333; }
+    .picon.yt { background: #FF0000; color: white; }
+    .picon.ig { background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737); color: white; }
+
+    /* Floating cards */
+    .float-card {
+      position: absolute;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 16px;
+    }
+    .float-card-1 { top: 8%; right: -80px; animation: float1 4s ease-in-out infinite; }
+    .float-card-2 { bottom: 12%; left: -80px; animation: float2 5s ease-in-out infinite; }
+    @keyframes float1 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+    @keyframes float2 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(10px)} }
+    .float-label {
+      font-family: var(--font-mono);
+      font-size: 9px; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 4px;
+    }
+    .float-value {
+      font-family: var(--font-display);
+      font-size: 22px; font-weight: 800; color: var(--white);
+    }
+    .float-sub { font-family: var(--font-mono); font-size: 9px; color: var(--muted); }
+
+    /* ===== LOGOS ===== */
+    .logos-section {
+      padding: 48px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .logos-label {
+      font-family: var(--font-mono);
+      font-size: 10px; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--muted);
+      text-align: center; margin-bottom: 28px;
+    }
+    .logos-row {
+      display: flex; align-items: center;
+      justify-content: center; gap: 56px; flex-wrap: wrap;
+    }
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 19px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--mid); transition: color 0.2s;
+    }
+    .brand-name:hover { color: var(--muted); }
+
+    /* ===== SECTIONS ===== */
+    .section { padding: 120px 48px; }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 10px; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--white);
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .section-label::before {
+      content: ''; display: block;
+      width: 24px; height: 1px; background: var(--lime);
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(48px, 6vw, 82px);
+      font-weight: 900; text-transform: uppercase;
+      color: var(--white); line-height: 0.92;
+      margin-bottom: 16px;
+    }
+    .section-title em { font-style: italic; color: var(--white); }
+
+    /* Steps */
+    .steps-wrap {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0; margin-top: 80px;
+      border: 1px solid var(--border);
+    }
+    .step {
+      padding: 56px 48px;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      position: relative; overflow: hidden;
+      transition: background 0.3s;
+    }
+    .step:hover { background: var(--panel); }
+    .step:nth-child(even) { border-right: none; }
+    .step:nth-child(3), .step:nth-child(4) { border-bottom: none; }
+    .step-num {
+      font-family: var(--font-display);
+      font-size: 100px; font-weight: 900;
+      color: var(--border); line-height: 1;
+      position: absolute; top: 16px; right: 20px;
+      transition: color 0.3s; user-select: none;
+    }
+    .step:hover .step-num { color: var(--mid); }
+    .step-icon {
+      width: 48px; height: 48px;
+      background: var(--lime);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px; font-size: 22px;
+    }
+    .step-title {
+      font-family: var(--font-display);
+      font-size: 28px; font-weight: 800;
+      text-transform: uppercase; color: var(--white);
+      margin-bottom: 12px; letter-spacing: 0.02em;
+    }
+    .step-text {
+      font-family: var(--font-mono);
+      font-size: 13px; font-weight: 300;
+      color: var(--muted); line-height: 1.85; max-width: 320px;
+    }
+
+    /* Two-col panels */
+    .two-col-section {
+      display: grid; grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .col-panel { padding: 88px 56px; position: relative; overflow: hidden; }
+    .col-panel.dark-panel { background: var(--panel); border-right: 1px solid var(--border); }
+    .col-panel.lime-panel { background: var(--lime); }
+    .col-label {
+      font-family: var(--font-mono);
+      font-size: 10px; letter-spacing: 0.25em;
+      text-transform: uppercase; margin-bottom: 32px;
+    }
+    .dark-panel .col-label { color: var(--white); }
+    .lime-panel .col-label { color: rgba(255,255,255,0.65); }
+    .col-heading {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 4vw, 62px);
+      font-weight: 900; text-transform: uppercase;
+      line-height: 0.92; margin-bottom: 36px;
+    }
+    .dark-panel .col-heading { color: var(--white); }
+    .lime-panel .col-heading { color: #FFFFFF; }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+    .feature-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-family: var(--font-mono); font-size: 13px; line-height: 1.65;
+    }
+    .dark-panel .feature-list li { color: var(--text); }
+    .lime-panel .feature-list li { color: #FFFFFF; }
+    .feature-list li::before {
+      content: '→'; flex-shrink: 0;
+      font-family: var(--font-mono); margin-top: 1px;
+    }
+    .dark-panel .feature-list li::before { color: var(--white); }
+    .lime-panel .feature-list li::before { color: rgba(255,255,255,0.6); }
+    .col-cta { margin-top: 44px; }
+    .btn-dark {
+      font-family: var(--font-display); font-size: 14px; font-weight: 800;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--white); background: var(--black);
+      padding: 14px 32px; border: 1px solid var(--lime);
+      cursor: pointer; text-decoration: none; display: inline-block;
+      transition: all 0.2s;
+    }
+    .btn-dark:hover { background: var(--lime); color: #FFFFFF; transform: translateY(-2px); }
+    .btn-black {
+      font-family: var(--font-display); font-size: 14px; font-weight: 800;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--white); background: var(--black);
+      padding: 14px 32px; border: none;
+      cursor: pointer; text-decoration: none; display: inline-block;
+      transition: all 0.2s;
+    }
+    .btn-black:hover { background: #0d0820; transform: translateY(-2px); }
+
+    /* ===== PRICING ===== */
+    .pricing-section {
+      padding: 120px 48px;
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .pricing-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: end; margin-bottom: 48px;
+    }
+    .pricing-desc {
+      font-family: var(--font-mono);
+      font-size: 13px; font-weight: 300;
+      color: var(--muted); line-height: 1.95; max-width: 380px;
+    }
+    .plans-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 0; border: 1px solid var(--border);
+    }
+    .plan {
+      padding: 48px 40px;
+      border-right: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .plan:last-child { border-right: none; }
+    .plan.featured { background: var(--panel); }
+    .plan-badge {
+      font-family: var(--font-mono); font-size: 9px;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: #FFFFFF; background: var(--lime);
+      padding: 4px 10px; display: inline-block; margin-bottom: 24px;
+    }
+    .plan-name {
+      font-family: var(--font-display); font-size: 22px; font-weight: 800;
+      text-transform: uppercase; color: var(--white); margin-bottom: 8px; letter-spacing: 0.04em;
+    }
+    .plan-desc {
+      font-family: var(--font-mono); font-size: 11px;
+      color: var(--muted); margin-bottom: 32px; line-height: 1.7;
+    }
+    .plan-price-num {
+      font-family: var(--font-display); font-size: 72px; font-weight: 900;
+      color: var(--white); line-height: 1;
+    }
+    .plan-price-num sup {
+      font-size: 28px; vertical-align: top;
+      margin-top: 12px; margin-right: 2px; color: var(--white);
+    }
+    .plan-price-period {
+      font-family: var(--font-mono); font-size: 11px;
+      color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;
+      margin-top: 6px; margin-bottom: 32px;
+    }
+    .plan-divider { height: 1px; background: var(--border); margin: 28px 0; }
+    .plan-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px; }
+    .plan-features li {
+      font-family: var(--font-mono); font-size: 12px; color: var(--text);
+      display: flex; align-items: flex-start; gap: 10px; line-height: 1.5;
+    }
+    .check { color: var(--white); flex-shrink: 0; font-size: 11px; }
+    .plan-features li.dim { color: var(--muted); }
+    .plan-features li.dim .check { color: var(--mid); }
+    .plan-btn {
+      display: block; font-family: var(--font-display); font-size: 13px;
+      font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+      text-align: center; padding: 14px; text-decoration: none; transition: all 0.2s; cursor: pointer;
+    }
+    .plan-btn-outline { color: var(--white); border: 1px solid var(--mid); }
+    .plan-btn-outline:hover { border-color: var(--white); color: var(--white); }
+    .plan-btn-filled { color: #FFFFFF; background: var(--lime); }
+    .plan-btn-filled:hover { background: var(--lime2); }
+
+    .savings-bar {
+      margin-top: 28px; padding: 20px 32px;
+      background: rgba(139,92,246,0.06);
+      border: 1px solid rgba(139,92,246,0.2);
+      display: flex; align-items: center; gap: 16px;
+    }
+    .savings-bar-icon { font-size: 18px; }
+    .savings-bar-text { font-family: var(--font-mono); font-size: 12px; color: var(--text); }
+    .savings-bar-text strong { color: var(--white); font-weight: 500; }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials-section { padding: 120px 48px; }
+    .testimonials-header {
+      display: flex; align-items: flex-end;
+      justify-content: space-between; margin-bottom: 56px;
+    }
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1px; background: var(--border);
+    }
+    .testimonial {
+      background: var(--black); padding: 40px;
+      transition: background 0.3s;
+    }
+    .testimonial:hover { background: var(--panel); }
+    .testimonial-quote {
+      font-family: var(--font-serif); font-size: 17px;
+      font-style: italic; color: var(--white);
+      line-height: 1.65; margin-bottom: 28px;
+    }
+    .testimonial-meta { display: flex; align-items: center; gap: 14px; }
+    .avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 16px;
+      font-weight: 900; color: var(--black); flex-shrink: 0;
+    }
+    .av1{background:var(--lime)} .av2{background:#FF8C3C} .av3{background:#3CB8FF}
+    .av4{background:#FF3CB8} .av5{background:#B83CFF} .av6{background:#FFD93C}
+    .testimonial-name {
+      font-family: var(--font-display); font-size: 14px; font-weight: 700;
+      text-transform: uppercase; color: var(--white); letter-spacing: 0.04em;
+    }
+    .testimonial-role { font-family: var(--font-mono); font-size: 10px; color: var(--muted); }
+    .testimonial-earnings {
+      margin-left: auto;
+      font-family: var(--font-display); font-size: 18px;
+      font-weight: 900; color: var(--white);
+    }
+
+    /* ===== FAQ ===== */
+    .faq-section {
+      padding: 0 48px 120px;
+      display: grid; grid-template-columns: 1fr 2fr; gap: 80px;
+    }
+    .faq-list { display: flex; flex-direction: column; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question {
+      width: 100%; background: none; border: none;
+      padding: 24px 0; display: flex;
+      align-items: center; justify-content: space-between;
+      cursor: pointer; text-align: left;
+    }
+    .faq-q-text {
+      font-family: var(--font-display); font-size: 18px; font-weight: 700;
+      text-transform: uppercase; color: var(--white); letter-spacing: 0.02em; line-height: 1.2;
+    }
+    .faq-toggle {
+      font-family: var(--font-mono); font-size: 20px;
+      color: var(--white); flex-shrink: 0;
+      margin-left: 16px; transition: transform 0.3s;
+    }
+    .faq-item.open .faq-toggle { transform: rotate(45deg); }
+    .faq-answer {
+      font-family: var(--font-mono); font-size: 13px;
+      font-weight: 300; color: var(--muted); line-height: 1.9;
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      padding-bottom: 0;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 24px; }
+
+    /* ===== CTA ===== */
+    .cta-section {
+      padding: 120px 48px;
+      background: var(--lime);
+      position: relative; overflow: hidden;
+    }
+    .cta-bg-text {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      font-family: var(--font-display);
+      font-size: clamp(100px, 16vw, 220px);
+      font-weight: 900; text-transform: uppercase;
+      color: rgba(255,255,255,0.08); white-space: nowrap;
+      pointer-events: none; letter-spacing: -0.02em;
+    }
+    .cta-inner {
+      position: relative; z-index: 2;
+      max-width: 700px; margin: 0 auto; text-align: center;
+    }
+    .cta-heading {
+      font-family: var(--font-display);
+      font-size: clamp(60px, 8vw, 112px);
+      font-weight: 900; text-transform: uppercase;
+      color: #FFFFFF; line-height: 0.9; margin-bottom: 24px;
+    }
+    .cta-heading em { font-style: italic; }
+    .cta-sub {
+      font-family: var(--font-mono); font-size: 14px;
+      font-weight: 300; color: rgba(255,255,255,0.75);
+      line-height: 1.85; margin-bottom: 44px;
+    }
+    .cta-actions {
+      display: flex; align-items: center;
+      justify-content: center; gap: 20px; flex-wrap: wrap;
+    }
+    .btn-cta-dark {
+      font-family: var(--font-display); font-size: 16px; font-weight: 800;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--white); background: var(--black);
+      padding: 18px 44px; border: none; cursor: pointer;
+      text-decoration: none; display: inline-block; transition: all 0.2s;
+    }
+    .btn-cta-dark:hover { background: #1e0a40; transform: translateY(-2px); }
+    .btn-cta-outline {
+      font-family: var(--font-display); font-size: 16px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #FFFFFF; background: transparent;
+      padding: 17px 44px; border: 2px solid rgba(255,255,255,0.4);
+      cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.2s;
+    }
+    .btn-cta-outline:hover { border-color: #FFFFFF; transform: translateY(-2px); }
+
+    /* ===== FOOTER ===== */
+    footer { padding: 72px 48px 40px; border-top: 1px solid var(--border); }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px; margin-bottom: 56px;
+    }
+    .footer-brand .nav-logo { display: block; margin-bottom: 16px; }
+    .footer-brand p {
+      font-family: var(--font-mono); font-size: 12px;
+      font-weight: 300; color: var(--muted); line-height: 1.85; max-width: 260px;
+    }
+    .footer-col-title {
+      font-family: var(--font-display); font-size: 13px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--white); margin-bottom: 20px;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a {
+      font-family: var(--font-mono); font-size: 12px; font-weight: 300;
+      color: var(--muted); text-decoration: none; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      padding-top: 28px; border-top: 1px solid var(--border);
+    }
+    .footer-copy { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+    .footer-copy span { color: var(--white); }
+    .footer-socials { display: flex; gap: 20px; }
+    .social-link {
+      font-family: var(--font-mono); font-size: 10px;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none; transition: color 0.2s;
+    }
+    .social-link:hover { color: var(--white); }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal {
+      opacity: 0; transform: translateY(36px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.12s; }
+    .reveal-delay-2 { transition-delay: 0.24s; }
+    .reveal-delay-3 { transition-delay: 0.36s; }
+
+    /* ===== RESPONSIVE ===== */
+    /* ===== MOBILE NAV ===== */
+    .nav-mobile-toggle {
+      display: none; background: none; border: 1px solid var(--border);
+      border-radius: 6px; cursor: pointer; width: 36px; height: 36px;
+      flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+    }
+    .nav-mobile-toggle span {
+      display: block; width: 16px; height: 1.5px;
+      background: var(--white); transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-mobile-toggle.active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-mobile-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-mobile-toggle.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* ===== SCROLL TO TOP ===== */
+    .scroll-top-btn {
+      position: fixed; bottom: 28px; right: 28px; z-index: 200;
+      width: 44px; height: 44px; border-radius: 50%; background: var(--lime);
+      color: #FFFFFF; border: none; cursor: pointer; font-size: 18px; font-weight: 700;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s, background 0.2s;
+      transform: translateY(8px);
+    }
+    .scroll-top-btn.visible { opacity: 1; pointer-events: all; transform: translateY(0); }
+    .scroll-top-btn:hover { background: var(--lime2); }
+
+    @media (max-width: 960px) {
+      nav { padding: 16px 20px; }
+      .nav-mobile-toggle { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; position: fixed;
+        top: 0; right: 0; bottom: 0; width: 280px; max-width: 80vw;
+        background: var(--panel); border-left: 1px solid var(--border);
+        padding: 80px 32px 40px; gap: 8px; z-index: 99;
+        transform: translateX(100%); transition: transform 0.3s ease;
+      }
+      .nav-links.mobile-open { transform: translateX(0); }
+      .nav-links li { list-style: none; }
+      .nav-links a { display: block; padding: 12px 0; font-size: 18px; border-bottom: 1px solid var(--border); }
+      .nav-cta { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 100px 20px 60px; }
+      .hero-right { display: none; }
+      .hero-stats { flex-wrap: wrap; gap: 20px; }
+      .steps-wrap { grid-template-columns: 1fr; }
+      .step { border-right: none !important; }
+      .step:nth-child(n) { border-bottom: 1px solid var(--border); }
+      .step:last-child { border-bottom: none; }
+      .two-col-section { grid-template-columns: 1fr; }
+      .col-panel.dark-panel { border-right: none; border-bottom: 1px solid var(--border); }
+      .pricing-header { grid-template-columns: 1fr; gap: 32px; }
+      .plans-grid { grid-template-columns: 1fr; }
+      .plan { border-right: none !important; border-bottom: 1px solid var(--border); }
+      .plan:last-child { border-bottom: none; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .faq-section { grid-template-columns: 1fr; gap: 40px; padding: 0 20px 80px; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: span 2; }
+      .section, .testimonials-section { padding: 80px 20px; }
+      .logos-section, .pricing-section { padding: 48px 20px; }
+      .cta-section { padding: 80px 20px; }
+      footer { padding: 48px 20px 32px; }
+      .float-card { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo"><img src="logo.png" class="nav-logo-icon" alt="NextWave Clippers" />NEXTWAVE<span>CLIPPERS</span></a>
+    <ul class="nav-links">
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="for-brands.html">For Brands</a></li>
+      <li><a href="for-clippers.html">For Clippers</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+    </ul>
+    <a href="pricing.html" class="nav-cta">Launch Campaign &rarr;</a>
+  </nav>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>Go Viral on TikTok</span><span class="ticker-dot">&nbsp;&bull;&nbsp;</span>
+      <span>YouTube Shorts</span><span class="ticker-dot">&nbsp;&bull;&nbsp;</span>
+      <span>Instagram Reels</span><span class="ticker-dot">&nbsp;&bull;&nbsp;</span>
+      <span>Earn Per View</span><span class="ticker-dot">&nbsp;&bull;&nbsp;</span>
+      <span>Launch for $1,000</span><span class="ticker-dot">&nbsp;&bull;&nbsp;</span>
+      <span>Real Results. Real Fast.</span><span class="ticker-dot">&nbsp;&bull;&nbsp;</span>
+      <span>Go Viral on TikTok</span><span class="ticker-dot">&nbsp;&bull;&nbsp;</span>
+      <span>YouTube Shorts</span><span class="ticker-dot">&nbsp;&bull;&nbsp;</span>
+      <span>Instagram Reels</span><span class="ticker-dot">&nbsp;&bull;&nbsp;</span>
+      <span>Earn Per View</span><span class="ticker-dot">&nbsp;&bull;&nbsp;</span>
+      <span>Launch for $1,000</span><span class="ticker-dot">&nbsp;&bull;&nbsp;</span>
+      <span>Real Results. Real Fast.</span><span class="ticker-dot">&nbsp;&bull;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+
+    <div class="hero-left reveal">
+      <div class="hero-eyebrow">The Viral Video Platform</div>
+      <h1 class="hero-h1">Get Paid<br />To <em>Clip</em><br />Videos</h1>
+      <p class="hero-sub">
+        Brands launch campaigns. Creators clip, post, and earn per view.
+        Real money for viral content &mdash; on TikTok, Shorts, and Reels.
+      </p>
+      <div class="hero-actions">
+        <a href="for-clippers.html" class="btn-primary">Start Clipping</a>
+        <a href="#brands" class="btn-ghost">Launch a Campaign</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num"><span data-count="2400" data-suffix="+">2400+</span></div>
+          <div class="hero-stat-label">Verified Clippers</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num"><span data-count="12" data-suffix="M+">12M+</span></div>
+          <div class="hero-stat-label">Views Delivered</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num"><span data-count="480" data-suffix="+">480+</span></div>
+          <div class="hero-stat-label">Campaigns Launched</div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- LOGOS -->
+  <div class="logos-section">
+    <div class="logos-label">Trusted by brands growing on social</div>
+    <div class="logos-row">
+      <span class="brand-name">Nexora</span>
+      <span class="brand-name">Threadhaus</span>
+      <span class="brand-name">Voltex</span>
+      <span class="brand-name">Meraki</span>
+      <span class="brand-name">Driftline</span>
+      <span class="brand-name">Novu</span>
+    </div>
+  </div>
+
+  <!-- STATS BAR -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--dark);">
+    <div style="padding:40px 36px;border-right:1px solid var(--border);text-align:center;">
+      <div style="font-family:var(--font-display);font-size:clamp(40px,5vw,64px);font-weight:900;color:var(--lime);line-height:1;"><span data-count="2400" data-suffix="+">2400+</span></div>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-top:8px;">Verified Clippers</div>
+    </div>
+    <div style="padding:40px 36px;border-right:1px solid var(--border);text-align:center;">
+      <div style="font-family:var(--font-display);font-size:clamp(40px,5vw,64px);font-weight:900;color:var(--lime);line-height:1;"><span data-count="12" data-suffix="M+">12M+</span></div>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-top:8px;">Views Delivered</div>
+    </div>
+    <div style="padding:40px 36px;border-right:1px solid var(--border);text-align:center;">
+      <div style="font-family:var(--font-display);font-size:clamp(40px,5vw,64px);font-weight:900;color:var(--lime);line-height:1;"><span data-count="480" data-suffix="+">480+</span></div>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-top:8px;">Campaigns Launched</div>
+    </div>
+    <div style="padding:40px 36px;text-align:center;">
+      <div style="font-family:var(--font-display);font-size:clamp(40px,5vw,64px);font-weight:900;color:var(--lime);line-height:1;">24hr</div>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-top:8px;">Average Launch Time</div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how-it-works">
+    <div class="section-label">The Process</div>
+    <h2 class="section-title reveal">How It<br /><em>Works</em></h2>
+    <div class="steps-wrap">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <div class="step-icon">&#127919;</div>
+        <div class="step-title">Brand Launches Campaign</div>
+        <p class="step-text">A brand submits their long-form content and sets a budget starting at $1,000. They define goals &mdash; views, reach, platform &mdash; and go live within 24 hours.</p>
+      </div>
+      <div class="step reveal reveal-delay-1">
+        <div class="step-num">02</div>
+        <div class="step-icon">&#9986;</div>
+        <div class="step-title">Clippers Pick Up the Work</div>
+        <p class="step-text">Verified clippers browse open campaigns, pick the ones they vibe with, and start creating short-form clips optimized for virality.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <div class="step-icon">&#128640;</div>
+        <div class="step-title">Post Across All Platforms</div>
+        <p class="step-text">Clips go live on TikTok, YouTube Shorts, and Instagram Reels. Our system tracks verified views via official APIs in real time.</p>
+      </div>
+      <div class="step reveal reveal-delay-1">
+        <div class="step-num">04</div>
+        <div class="step-icon">&#128181;</div>
+        <div class="step-title">Everyone Gets Paid</div>
+        <p class="step-text">Clippers earn based on CPM. The more views, the bigger the payout. Brands get guaranteed reach. No middlemen. No guesswork.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR BRANDS / FOR CLIPPERS -->
+  <div class="two-col-section" id="brands">
+    <div class="col-panel dark-panel">
+      <div class="col-label">For Brands</div>
+      <h3 class="col-heading">Scale Your<br />Content<br />Fast</h3>
+      <ul class="feature-list">
+        <li>Launch your campaign in under 24 hours</li>
+        <li>Hundreds of creators clip and post for you</li>
+        <li>Real-time analytics dashboard</li>
+        <li>Pay only for verified views &mdash; zero waste</li>
+        <li>TikTok, Shorts &amp; Reels coverage simultaneously</li>
+        <li>Campaign manager support included</li>
+      </ul>
+      <div class="col-cta">
+        <a href="#pricing" class="btn-dark">Launch Campaign &rarr;</a>
+      </div>
+    </div>
+    <div class="col-panel lime-panel" id="clippers">
+      <div class="col-label">For Clippers</div>
+      <h3 class="col-heading" style="color:#FFFFFF">Turn Skills<br />Into<br />Income</h3>
+      <ul class="feature-list">
+        <li>Browse live campaigns from real brands</li>
+        <li>Clip, post, and earn &mdash; no upfront cost</li>
+        <li>Weekly payouts, no waiting games</li>
+        <li>Track earnings with your personal dashboard</li>
+        <li>Build a portfolio brands actually notice</li>
+        <li>Bonuses for top-performing clips each month</li>
+      </ul>
+      <div class="col-cta">
+        <a href="for-clippers.html#apply" class="btn-black">Apply as a Clipper &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <section class="pricing-section" id="pricing">
+    <div class="pricing-header">
+      <div>
+        <div class="section-label">Pricing</div>
+        <h2 class="section-title reveal">Starting at<br /><em>$1,000</em></h2>
+      </div>
+      <p class="pricing-desc reveal">
+        We cut the price competitors charge. Get the same viral reach, the same clipper network, the same real-time view tracking &mdash; for a fraction of the cost. Other platforms start at $5,000. Every campaign is custom-quoted based on your goals &mdash; tell us what you need.
+      </p>
+    </div>
+    <div class="reveal" style="text-align:center;padding:48px 0 16px;">
+      <a href="pricing.html" class="btn-primary" style="font-size:15px;padding:18px 56px;">Get a Custom Quote &rarr;</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="testimonials-header">
+      <div>
+        <div class="section-label">Social Proof</div>
+        <h2 class="section-title reveal">What They're<br /><em>Saying</em></h2>
+      </div>
+    </div>
+    <div class="testimonials-grid reveal">
+      <div class="testimonial">
+        <p class="testimonial-quote">"Launched a $1,000 campaign on a Thursday. By Monday we had 400K views and sold out two product drops. Insane ROI."</p>
+        <div class="testimonial-meta">
+          <div class="avatar av1">JR</div>
+          <div>
+            <div class="testimonial-name">Jordan R.</div>
+            <div class="testimonial-role">Founder, Threadhaus</div>
+          </div>
+          <div class="testimonial-earnings">$12K rev</div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-quote">"I made $2,400 in my first month just clipping videos in my spare time. Campaigns are legit and payouts hit every week."</p>
+        <div class="testimonial-meta">
+          <div class="avatar av2">MK</div>
+          <div>
+            <div class="testimonial-name">Marcus K.</div>
+            <div class="testimonial-role">Full-time Clipper</div>
+          </div>
+          <div class="testimonial-earnings">$2.4K/mo</div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-quote">"We were spending $8K/month on agencies for worse results. NextWave Clippers gave us 3x the views for a third of the budget."</p>
+        <div class="testimonial-meta">
+          <div class="avatar av3">SL</div>
+          <div>
+            <div class="testimonial-name">Sofia L.</div>
+            <div class="testimonial-role">CMO, Voltex</div>
+          </div>
+          <div class="testimonial-earnings">3x reach</div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-quote">"Set up my first campaign in 15 minutes. Had clippers posting within the hour. This is the future of brand marketing."</p>
+        <div class="testimonial-meta">
+          <div class="avatar av4">TA</div>
+          <div>
+            <div class="testimonial-name">Tyler A.</div>
+            <div class="testimonial-role">Marketing, Novu</div>
+          </div>
+          <div class="testimonial-earnings">650K views</div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-quote">"Best side hustle I've found. I'm a college student and clear $800&ndash;$1,200 a month just editing clips after class."</p>
+        <div class="testimonial-meta">
+          <div class="avatar av5">PW</div>
+          <div>
+            <div class="testimonial-name">Priya W.</div>
+            <div class="testimonial-role">Student Clipper</div>
+          </div>
+          <div class="testimonial-earnings">$1.1K/mo</div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-quote">"We hit 1M views in under two weeks on a $1,000 campaign. Other platforms wanted $5,000 for the same thing. No brainer."</p>
+        <div class="testimonial-meta">
+          <div class="avatar av6">DM</div>
+          <div>
+            <div class="testimonial-name">Diego M.</div>
+            <div class="testimonial-role">CEO, Meraki</div>
+          </div>
+          <div class="testimonial-earnings">1M+ views</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="faq-sidebar reveal">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Got<br /><em>Questions?</em></h2>
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--muted);line-height:1.85;margin-top:24px;">
+        Can't find your answer?<br />
+        <a href="#" style="color:var(--lime);text-decoration:none;">Chat with us &rarr;</a>
+      </p>
+    </div>
+    <div class="faq-list reveal reveal-delay-1">
+      <div class="faq-item open">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How much does it cost to launch a campaign?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">Our Starter campaign begins at just $1,000 &mdash; a fraction of what other platforms charge ($5,000+). That budget covers verified views, active clippers, and platform distribution across TikTok, YouTube Shorts, and Instagram Reels. Scale up with Growth or Enterprise as you see results.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How do clippers get paid?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">Clippers are paid on a CPM (cost per thousand views) model. Once your clip generates verified views tracked through official platform APIs, your earnings accumulate in your dashboard. Payouts are sent weekly &mdash; no thresholds, no games.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What kind of content works best?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">Long-form content &mdash; podcasts, interviews, product launches, behind-the-scenes footage &mdash; clips exceptionally well. Our top campaigns come from authentic storytelling content, not scripted ads. The more genuine the source material, the more viral the clips tend to go.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How fast will my campaign go live?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">Most campaigns are reviewed and live within 24 hours of submission. Once approved, our clipper network is immediately notified. Brands typically see first clips posted within 48 hours of campaign launch.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Are the views real and verified?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">Yes. We use official API integrations with YouTube and verified scraping services for TikTok and Instagram. We only count real organic views &mdash; no bots, no inflated numbers. Every view in your dashboard represents a real person who watched your content.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Can I apply as a clipper if I'm a beginner?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">Absolutely. We welcome beginners. You'll complete a short onboarding quiz and submit one sample clip before approval. From there, start browsing open campaigns and earning right away. No experience required &mdash; just a sharp eye for viral content.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-bg-text">NextWave Clippers</div>
+    <div class="cta-inner">
+      <h2 class="cta-heading reveal">Ready To<br /><em>Go Viral?</em></h2>
+      <p class="cta-sub reveal reveal-delay-1">
+        Launch your first campaign today for just $1,000.<br />
+        No agencies. No guesswork. Just views, clips, and growth.
+      </p>
+      <div class="cta-actions reveal reveal-delay-2">
+        <a href="#" class="btn-cta-dark">Launch Campaign &rarr;</a>
+        <a href="#" class="btn-cta-outline">Apply as Clipper</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><img src="logo.png" class="nav-logo-icon" alt="NextWave Clippers" />NEXTWAVE<span>CLIPPERS</span></a>
+        <p>The viral video clipping platform connecting brands with a network of creators who clip, post, and earn per view.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <ul class="footer-links">
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="for-brands.html">For Brands</a></li>
+          <li><a href="for-clippers.html">For Clippers</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Blog</div>
+        <ul class="footer-links">
+          <li><a href="blog/index.html">All Posts</a></li>
+          <li><a href="blog/how-to-become-a-clipper.html">Become a Clipper</a></li>
+          <li><a href="blog/how-much-do-clippers-make.html">Clipper Earnings</a></li>
+          <li><a href="blog/tiktok-guide.html">TikTok Guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 <span>NextWave Clippers</span>. All rights reserved.</div>
+      <div class="footer-socials">
+        <a href="#" class="social-link">TikTok</a>
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">Twitter / X</a>
+        <a href="#" class="social-link">YouTube</a>
+        <a href="https://discord.gg/HsKPHU33cU" class="social-link" target="_blank" rel="noopener">Discord</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== THEME TOGGLE =====
+    (function () {
+      var saved = localStorage.getItem('cw-theme');
+      if (saved === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      function buildToggle() {
+        var nav = document.querySelector('nav');
+        if (!nav || nav.querySelector('.theme-toggle')) return;
+        var btn = document.createElement('button');
+        btn.className = 'theme-toggle';
+        btn.setAttribute('aria-label', 'Toggle colour mode');
+        var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        btn.textContent = isLight ? '☾' : '☀';
+        btn.addEventListener('click', function () {
+          var nowLight = document.documentElement.getAttribute('data-theme') === 'light';
+          if (nowLight) {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('cw-theme', 'dark');
+            btn.textContent = '☀';
+          } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('cw-theme', 'light');
+            btn.textContent = '☾';
+          }
+        });
+        var cta = nav.querySelector('.nav-cta');
+        if (cta) nav.insertBefore(btn, cta);
+        else nav.appendChild(btn);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', buildToggle);
+      } else {
+        buildToggle();
+      }
+    })();
+
+    // ===== MOBILE NAV =====
+    (function () {
+      function buildMobileNav() {
+        var nav = document.querySelector('nav');
+        var links = nav && nav.querySelector('.nav-links');
+        if (!nav || !links || nav.querySelector('.nav-mobile-toggle')) return;
+        var btn = document.createElement('button');
+        btn.className = 'nav-mobile-toggle';
+        btn.setAttribute('aria-label', 'Open menu');
+        btn.innerHTML = '<span></span><span></span><span></span>';
+        btn.addEventListener('click', function () {
+          var open = links.classList.toggle('mobile-open');
+          btn.classList.toggle('active', open);
+          document.body.style.overflow = open ? 'hidden' : '';
+        });
+        links.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () {
+            links.classList.remove('mobile-open');
+            btn.classList.remove('active');
+            document.body.style.overflow = '';
+          });
+        });
+        nav.appendChild(btn);
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', buildMobileNav);
+      else buildMobileNav();
+    })();
+
+    // ===== SCROLL TO TOP =====
+    (function () {
+      function buildScrollTop() {
+        var btn = document.createElement('button');
+        btn.className = 'scroll-top-btn';
+        btn.setAttribute('aria-label', 'Scroll to top');
+        btn.innerHTML = '&#8593;';
+        document.body.appendChild(btn);
+        window.addEventListener('scroll', function () {
+          btn.classList.toggle('visible', window.scrollY > 500);
+        }, { passive: true });
+        btn.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', buildScrollTop);
+      else buildScrollTop();
+    })();
+
+    // ===== ANIMATED COUNTERS =====
+    (function () {
+      function runCounter(el) {
+        var target = parseFloat(el.dataset.count);
+        var suffix = el.dataset.suffix || '';
+        var prefix = el.dataset.prefix || '';
+        var decimals = el.dataset.decimals ? parseInt(el.dataset.decimals) : 0;
+        var duration = 2000;
+        var start = performance.now();
+        function tick(now) {
+          var progress = Math.min((now - start) / duration, 1);
+          var ease = 1 - Math.pow(1 - progress, 4);
+          var val = target * ease;
+          el.textContent = prefix + (decimals ? val.toFixed(decimals) : Math.floor(val).toLocaleString()) + suffix;
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+      function buildCounters() {
+        var els = document.querySelectorAll('[data-count]');
+        if (!els.length) return;
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            runCounter(e.target);
+            obs.unobserve(e.target);
+          });
+        }, { threshold: 0.6 });
+        els.forEach(function (el) { obs.observe(el); });
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', buildCounters);
+      else buildCounters();
+    })();
+
+    // Scroll Reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(r => observer.observe(r));
+
+    // FAQ Toggle
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // Nav active state on scroll
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => { if (window.scrollY >= sec.offsetTop - 120) current = sec.id; });
+      navLinks.forEach(link => {
+        link.style.color = link.getAttribute('href') === '#' + current ? 'var(--lime)' : '';
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><link rel="icon" type="image/png" href="logo.png" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — NextWave Clippers</title>
+    <meta property="og:type" content="website" />
+  <meta property="og:title" content="About | NextWave Clippers" />
+  <meta property="og:description" content="We built NextWave Clippers to connect brands who need viral reach with creators who deserve fair pay. Learn our story." />
+  <meta property="og:image" content="https://nextwaveclippers.com/logo.png" />
+  <meta property="og:site_name" content="NextWave Clippers" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About | NextWave Clippers" />
+  <meta name="twitter:description" content="We built NextWave Clippers to connect brands who need viral reach with creators who deserve fair pay. Learn our story." />
+  <meta name="twitter:image" content="https://nextwaveclippers.com/logo.png" />
+  <meta name="description" content="We built NextWave Clippers to connect brands who need viral reach with creators who deserve fair pay. Learn our story." /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,900&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .about-hero { min-height: 70vh; display: flex; align-items: center; padding: 130px 48px 80px; border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+    .about-hero-bg { position: absolute; inset: 0; background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 56px 56px; opacity: 0.35; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 75%); }
+    .about-hero-glow { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, var(--lime-glow) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
+    .about-hero-inner { position: relative; z-index: 2; max-width: 900px; }
+    .about-hero h1 { font-family: var(--font-display); font-size: clamp(64px,10vw,140px); font-weight: 900; text-transform: uppercase; color: var(--white); line-height: 0.88; margin-bottom: 32px; }
+    .about-hero h1 em { font-style: italic; color: var(--lime); }
+    .about-hero-desc { font-family: var(--font-serif); font-size: clamp(18px,2.5vw,26px); font-style: italic; color: var(--text); line-height: 1.7; max-width: 680px; }
+
+    .mission-section { padding: 100px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; border-bottom: 1px solid var(--border); }
+    .mission-left h2 { font-family: var(--font-display); font-size: clamp(40px,6vw,80px); font-weight: 900; text-transform: uppercase; color: var(--white); line-height: 0.9; margin-bottom: 24px; }
+    .mission-left h2 em { font-style: italic; color: var(--lime); }
+    .mission-right p { font-family: var(--font-mono); font-size: 14px; font-weight: 300; color: var(--muted); line-height: 1.95; margin-bottom: 20px; }
+
+    .values-section { padding: 100px 48px; background: var(--dark); border-bottom: 1px solid var(--border); }
+    .values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin-top: 64px; border: 1px solid var(--border); }
+    .value-card { padding: 44px 36px; border-right: 1px solid var(--border); transition: background 0.3s; }
+    .value-card:last-child { border-right: none; }
+    .value-card:hover { background: var(--panel); }
+    .value-num { font-family: var(--font-display); font-size: 56px; font-weight: 900; color: var(--lime); line-height: 1; margin-bottom: 16px; }
+    .value-title { font-family: var(--font-display); font-size: 22px; font-weight: 800; text-transform: uppercase; color: var(--white); margin-bottom: 12px; letter-spacing: 0.03em; }
+    .value-desc { font-family: var(--font-mono); font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.85; }
+
+    .story-section { padding: 100px 48px; border-bottom: 1px solid var(--border); }
+    .story-inner { max-width: 780px; }
+    .story-inner p { font-family: var(--font-mono); font-size: 14px; font-weight: 300; color: var(--muted); line-height: 1.95; margin-bottom: 20px; }
+    .story-inner p strong { color: var(--text); font-weight: 400; }
+    .story-inner blockquote { font-family: var(--font-serif); font-size: 22px; font-style: italic; color: var(--white); line-height: 1.6; border-left: 3px solid var(--lime); padding-left: 28px; margin: 36px 0; }
+
+    .join-section { background: var(--lime); padding: 100px 48px; position: relative; overflow: hidden; }
+    .join-bg { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-family: var(--font-display); font-size: clamp(80px,14vw,180px); font-weight: 900; text-transform: uppercase; color: rgba(255,255,255,0.08); white-space: nowrap; pointer-events: none; }
+    .join-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .join-inner h2 { font-family: var(--font-display); font-size: clamp(52px,8vw,100px); font-weight: 900; text-transform: uppercase; color: #FFFFFF; line-height: 0.88; }
+    .join-inner h2 em { font-style: italic; }
+    .join-right p { font-family: var(--font-mono); font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.75); line-height: 1.9; margin-bottom: 32px; }
+    .join-btns { display: flex; flex-direction: column; gap: 14px; }
+    .btn-join-dark { display: block; font-family: var(--font-display); font-size: 15px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lime); background: #07090A; padding: 16px 32px; text-decoration: none; transition: all 0.2s; text-align: center; cursor: none; }
+    .btn-join-dark:hover { background: #1e0a40; transform: translateY(-2px); }
+    .btn-join-outline { display: block; font-family: var(--font-display); font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #FFFFFF; background: transparent; padding: 15px 32px; border: 2px solid rgba(255,255,255,0.4); text-decoration: none; transition: all 0.2s; text-align: center; cursor: none; }
+    .btn-join-outline:hover { border-color: #FFFFFF; transform: translateY(-2px); }
+
+    @media(max-width:960px){
+      .about-hero{padding:100px 20px 60px}
+      .mission-section{grid-template-columns:1fr;gap:32px;padding:60px 20px}
+      .values-grid{grid-template-columns:1fr}
+      .value-card{border-right:none;border-bottom:1px solid var(--border)}
+      .value-card:last-child{border-bottom:none}
+      .values-section,.story-section{padding:60px 20px}
+      .join-inner{grid-template-columns:1fr;gap:32px}
+      .join-section{padding:60px 20px}
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div><div class="cursor-ring" id="cursorRing"></div>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="logo.png" class="nav-logo-icon" alt="NextWave Clippers" />NEXTWAVE<span>CLIPPERS</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="for-brands.html">For Brands</a></li>
+      <li><a href="for-clippers.html">For Clippers</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+    </ul>
+    <a href="pricing.html" class="nav-cta">Launch Campaign &rarr;</a>
+  </nav>
+
+  <div class="about-hero" style="background-image:linear-gradient(rgba(8,10,8,0.82),rgba(8,10,8,0.82)),url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center top">
+    <div class="about-hero-bg"></div>
+    <div class="about-hero-glow"></div>
+    <div class="about-hero-inner reveal">
+      <div class="section-label">About NextWave Clippers</div>
+      <h1>Built for the<br /><em>Creator</em><br />Economy</h1>
+      <p class="about-hero-desc">"We built NextWave Clippers because we saw brands struggling to go viral and creators struggling to get paid fairly — and realized the solution to both problems was the same."</p>
+    </div>
+  </div>
+
+  <div class="mission-section">
+    <div class="mission-left reveal">
+      <div class="section-label">Our Mission</div>
+      <h2>Make Viral<br /><em>Reach</em><br />Accessible</h2>
+    </div>
+    <div class="mission-right reveal reveal-delay-1">
+      <p>Short-form video is the most powerful distribution channel in the world right now. A single clip can put a brand in front of millions of people overnight — at no cost except the time of the creator who made it. But most brands don't have the time, skills, or team to produce short-form content at the volume needed to actually win.</p>
+      <p>At the same time, there are thousands of skilled creators, editors, and clip artists who are great at producing viral short-form content — but have no reliable way to monetize that skill. They can't easily find brands who need them, and the brands who need them can't easily find them.</p>
+      <p>NextWave Clippers fixes both sides of that equation. Brands get a frictionless way to launch viral campaigns. Creators get a marketplace of paid campaigns ready to clip. Everyone wins based on actual results — real views, real earnings, real reach.</p>
+    </div>
+  </div>
+
+  <div class="values-section">
+    <div class="section-label">Our Values</div>
+    <h2 class="section-title reveal">What We<br /><em>Stand For</em></h2>
+    <div class="values-grid reveal">
+      <div class="value-card">
+        <div class="value-num">01</div>
+        <div class="value-title">Results Over Promises</div>
+        <div class="value-desc">Every dollar spent on NextWave Clippers buys verified, real views — not impressions, not reach estimates, not creative fees. If it didn't get views, it doesn't get paid. That's the standard we hold ourselves to.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-num">02</div>
+        <div class="value-title">Fair Pay for Creators</div>
+        <div class="value-desc">Creators power the internet's most valuable content and have historically been undervalued. We designed NextWave Clippers's economics so that the people doing the creative work earn a fair share of the value they create.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-num">03</div>
+        <div class="value-title">Radically Accessible</div>
+        <div class="value-desc">Viral reach shouldn't cost $50,000. A great campaign should be within reach of any brand, at any stage. Starting at $1,000 isn't a compromise — it's the point.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="story-section">
+    <div class="section-label">Our Story</div>
+    <div class="story-inner">
+      <h2 class="section-title reveal" style="font-size:clamp(44px,6vw,72px);margin-bottom:40px">How We Got<br /><em>Here</em></h2>
+      <div class="reveal">
+        <p>NextWave Clippers started from a simple observation: the brands that were growing the fastest on social media in 2023 weren't running expensive ad campaigns. They were going viral through organic short-form video — clips that found the right moment in their content and put it in front of the right audience.</p>
+        <blockquote>"The brands who won weren't spending more money. They were distributing smarter."</blockquote>
+
+        <div style="margin:40px 0;overflow:hidden;border:1px solid var(--border)">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" alt="Team working together on content strategy" loading="lazy" style="width:100%;height:300px;object-fit:cover;display:block;opacity:0.8" />
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--muted);letter-spacing:0.08em;padding:12px 16px;border-top:1px solid var(--border);background:var(--panel)">NextWave Clippers was built by a team that understood both sides: the brands that couldn't go viral and the creators who couldn't get paid.</div>
+        </div>
+
+        <p>The problem was that producing short-form content at the volume needed to consistently win — 10, 20, 30 clips per week across multiple platforms — was beyond the capacity of any one person or small team. It required a network.</p>
+        <p>So we built one. <strong>NextWave Clippers is a marketplace where brands launch campaigns and verified clippers earn by turning that content into viral short-form clips.</strong> The brand gets reach. The clipper gets paid. The content finds its audience.</p>
+        <p>We started with a handful of brands and 50 clippers in our beta. Within 6 months, campaigns had generated over 10 million verified views. Today, NextWave Clippers has 2,000+ active clippers, dozens of brand partners, and campaigns running across TikTok, YouTube Shorts, Instagram Reels, and X daily.</p>
+        <p>We're just getting started.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="join-section">
+    <div class="join-bg">JOIN</div>
+    <div class="join-inner">
+      <div class="reveal">
+        <h2>Join<br /><em>NextWave Clippers</em></h2>
+      </div>
+      <div class="join-right reveal reveal-delay-1">
+        <p>Whether you're a brand looking to go viral or a creator looking to get paid for your skills — NextWave Clippers is built for you. Start today with no long-term commitment required.</p>
+        <div class="join-btns">
+          <a href="pricing.html" class="btn-join-dark">Launch a Campaign &rarr;</a>
+          <a href="for-clippers.html" class="btn-join-outline">Apply as a Clipper</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand"><a href="index.html" class="nav-logo"><img src="logo.png" class="nav-logo-icon" alt="NextWave Clippers" />NEXTWAVE<span>CLIPPERS</span></a><p>The viral video clipping platform connecting brands with creators who clip, post, and earn per view.</p></div>
+      <div><div class="footer-col-title">Platform</div><ul class="footer-links"><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="for-brands.html">For Brands</a></li><li><a href="for-clippers.html">For Clippers</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+      <div><div class="footer-col-title">Blog</div><ul class="footer-links"><li><a href="blog/how-to-become-a-clipper.html">Become a Clipper</a></li><li><a href="blog/how-much-do-clippers-make.html">Clipper Earnings</a></li><li><a href="blog/tiktok-guide.html">TikTok Guide</a></li><li><a href="blog/best-editing-tools.html">Editing Tools</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="#">Careers</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 <span>NextWave Clippers</span>. All rights reserved.</div>
+      <div class="footer-socials"><a href="#" class="social-link">TikTok</a><a href="#" class="social-link">Instagram</a><a href="#" class="social-link">Twitter / X</a><a href="#" class="social-link">YouTube</a></div>
+    </div>
+  </footer>
+  <script src="shared.js"></script>
+</body>
+</html>

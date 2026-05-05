@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><link rel="icon" type="image/png" href="logo.png" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Clippers — NextWave Clippers</title>
+    <meta property="og:type" content="website" />
+  <meta property="og:title" content="For Clippers | NextWave Clippers" />
+  <meta property="og:description" content="Earn $3,000â€“$8,000/month clipping videos for real brand campaigns. Weekly payouts, flexible hours, work from anywhere." />
+  <meta property="og:image" content="https://nextwaveclippers.com/logo.png" />
+  <meta property="og:site_name" content="NextWave Clippers" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="For Clippers | NextWave Clippers" />
+  <meta name="twitter:description" content="Earn $3,000â€“$8,000/month clipping videos for real brand campaigns. Weekly payouts, flexible hours, work from anywhere." />
+  <meta name="twitter:image" content="https://nextwaveclippers.com/logo.png" />
+  <meta name="description" content="Earn $3,000â€“$8,000/month clipping videos for real brand campaigns. Weekly payouts, flexible hours, work from anywhere." /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,900&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .clipper-hero {
+      background: var(--lime); padding: 120px 48px 80px;
+      position: relative; overflow: hidden;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .clipper-hero-bg-text {
+      position: absolute; bottom: -20px; right: -20px;
+      font-family: var(--font-display); font-size: clamp(120px,18vw,240px);
+      font-weight: 900; text-transform: uppercase; color: rgba(255,255,255,0.08);
+      line-height: 1; pointer-events: none; letter-spacing: -0.04em;
+      user-select: none;
+    }
+    .clipper-hero-inner { position: relative; z-index: 2; max-width: 680px; }
+    .clipper-hero .section-label { color: rgba(255,255,255,0.65); }
+    .clipper-hero .section-label::before { background: rgba(255,255,255,0.4); }
+    .clipper-hero h1 {
+      font-family: var(--font-display); font-size: clamp(64px,10vw,130px);
+      font-weight: 900; text-transform: uppercase; color: #FFFFFF;
+      line-height: 0.88; margin-bottom: 24px;
+    }
+    .clipper-hero h1 em { font-style: italic; }
+    .clipper-hero p { font-family: var(--font-mono); font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.75); line-height: 1.9; max-width: 460px; margin-bottom: 40px; }
+    .btn-clipper-primary {
+      font-family: var(--font-display); font-size: 15px; font-weight: 800;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--lime); background: var(--black);
+      padding: 16px 40px; border: none; cursor: none;
+      text-decoration: none; display: inline-block; transition: all 0.2s;
+      margin-right: 16px; margin-bottom: 12px;
+    }
+    .btn-clipper-primary:hover { background: #1e0a40; transform: translateY(-2px); }
+    .btn-clipper-ghost {
+      font-family: var(--font-display); font-size: 15px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #FFFFFF; background: transparent;
+      padding: 15px 40px; border: 2px solid rgba(255,255,255,0.4);
+      cursor: none; text-decoration: none; display: inline-block; transition: all 0.2s;
+      margin-bottom: 12px;
+    }
+    .btn-clipper-ghost:hover { border-color: #FFFFFF; transform: translateY(-2px); }
+
+    .hero-stats-dark {
+      background: var(--black); border-top: 1px solid var(--border);
+      display: grid; grid-template-columns: repeat(4,1fr);
+    }
+    .hero-stat-dark {
+      padding: 40px 40px; border-right: 1px solid var(--border);
+    }
+    .hero-stat-dark:last-child { border-right: none; }
+    .hero-stat-num-dark { font-family: var(--font-display); font-size: 52px; font-weight: 900; color: var(--lime); line-height: 1; }
+    .hero-stat-label-dark { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+
+    .earn-section { padding: 100px 48px; border-bottom: 1px solid var(--border); }
+    .earn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 64px; border: 1px solid var(--border); }
+    .earn-card { padding: 48px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transition: background 0.3s; }
+    .earn-card:hover { background: var(--panel); }
+    .earn-card:nth-child(even) { border-right: none; }
+    .earn-card:nth-last-child(-n+2) { border-bottom: none; }
+    .earn-icon { font-size: 28px; margin-bottom: 16px; }
+    .earn-title { font-family: var(--font-display); font-size: 22px; font-weight: 800; text-transform: uppercase; color: var(--white); margin-bottom: 10px; letter-spacing: 0.03em; }
+    .earn-desc { font-family: var(--font-mono); font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.85; }
+
+    .process-section { padding: 100px 48px; background: var(--dark); border-bottom: 1px solid var(--border); }
+    .process-steps { margin-top: 64px; display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); }
+    .process-step { display: grid; grid-template-columns: 120px 1fr; border-bottom: 1px solid var(--border); transition: background 0.3s; }
+    .process-step:last-child { border-bottom: none; }
+    .process-step:hover { background: var(--panel); }
+    .process-step-num { font-family: var(--font-display); font-size: 64px; font-weight: 900; color: var(--border); padding: 32px; display: flex; align-items: center; justify-content: center; border-right: 1px solid var(--border); transition: color 0.3s; }
+    .process-step:hover .process-step-num { color: var(--mid); }
+    .process-step-body { padding: 32px 40px; }
+    .process-step-title { font-family: var(--font-display); font-size: 22px; font-weight: 800; text-transform: uppercase; color: var(--white); margin-bottom: 8px; letter-spacing: 0.03em; }
+    .process-step-desc { font-family: var(--font-mono); font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.85; }
+
+    .cpm-section { padding: 100px 48px; border-bottom: 1px solid var(--border); }
+    .cpm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-top: 64px; }
+    .cpm-calc { background: var(--panel); border: 1px solid var(--border); padding: 48px; }
+    .cpm-calc-title { font-family: var(--font-display); font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--white); margin-bottom: 28px; }
+    .cpm-row { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid var(--border); }
+    .cpm-row:last-child { border-bottom: none; }
+    .cpm-views { font-family: var(--font-mono); font-size: 13px; color: var(--muted); }
+    .cpm-rate { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+    .cpm-earn { font-family: var(--font-display); font-size: 28px; font-weight: 900; color: var(--lime); }
+    .cpm-text h3 { font-family: var(--font-display); font-size: clamp(36px,5vw,56px); font-weight: 900; text-transform: uppercase; color: var(--white); line-height: 0.92; margin-bottom: 20px; }
+    .cpm-text h3 em { font-style: italic; color: var(--lime); }
+    .cpm-text p { font-family: var(--font-mono); font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.9; margin-bottom: 28px; }
+
+    .apply-section {
+      background: var(--lime); padding: 100px 48px;
+      position: relative; overflow: hidden;
+    }
+    .apply-bg { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-family: var(--font-display); font-size: clamp(80px,14vw,180px); font-weight: 900; text-transform: uppercase; color: rgba(255,255,255,0.08); white-space: nowrap; pointer-events: none; }
+    .apply-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .apply-left h2 { font-family: var(--font-display); font-size: clamp(52px,7vw,96px); font-weight: 900; text-transform: uppercase; color: #FFFFFF; line-height: 0.88; margin-bottom: 20px; }
+    .apply-left p { font-family: var(--font-mono); font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.9; }
+    .apply-form { background: var(--black); padding: 40px; }
+    .apply-form-title { font-family: var(--font-display); font-size: 20px; font-weight: 800; text-transform: uppercase; color: var(--white); margin-bottom: 24px; letter-spacing: 0.04em; }
+    .form-field { margin-bottom: 16px; }
+    .form-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 6px; }
+    .form-input { width: 100%; background: var(--panel); border: 1px solid var(--border); padding: 12px 16px; font-family: var(--font-mono); font-size: 13px; color: var(--white); outline: none; transition: border-color 0.2s; }
+    .form-input:focus { border-color: var(--lime); }
+    .form-input::placeholder { color: var(--muted); }
+    .form-select { appearance: none; cursor: none; }
+    .form-submit { display: block; width: 100%; font-family: var(--font-display); font-size: 15px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #FFFFFF; background: var(--lime); padding: 15px; border: none; cursor: pointer; margin-top: 24px; transition: background 0.2s; }
+    .form-submit:hover { background: var(--lime2); }
+
+    @media(max-width:960px){
+      .clipper-hero{padding:100px 20px 60px}
+      .hero-stats-dark{grid-template-columns:1fr 1fr}
+      .hero-stat-dark{border-bottom:1px solid var(--border)}
+      .earn-grid{grid-template-columns:1fr}
+      .earn-card{border-right:none!important;border-bottom:1px solid var(--border)!important}
+      .earn-card:last-child{border-bottom:none!important}
+      .process-section,.earn-section,.cpm-section{padding:60px 20px}
+      .cpm-grid{grid-template-columns:1fr;gap:40px}
+      .apply-inner{grid-template-columns:1fr;gap:32px}
+      .apply-section{padding:60px 20px}
+      .process-step{grid-template-columns:80px 1fr}
+      .process-step-num{font-size:40px;padding:20px}
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div><div class="cursor-ring" id="cursorRing"></div>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="logo.png" class="nav-logo-icon" alt="NextWave Clippers" />NEXTWAVE<span>CLIPPERS</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="for-brands.html">For Brands</a></li>
+      <li><a href="for-clippers.html" class="active">For Clippers</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+    </ul>
+    <a href="pricing.html" class="nav-cta">Launch Campaign &rarr;</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="clipper-hero">
+    <div class="clipper-hero-bg-text">EARN</div>
+    <div class="clipper-hero-inner reveal">
+      <div class="section-label" style="color:rgba(255,255,255,0.6)">For Clippers</div>
+      <h1>Clip Videos.<br /><em>Get Paid.</em></h1>
+      <p>Browse live brand campaigns. Create short-form clips. Post to TikTok, Shorts, and Reels. Earn per verified view — weekly payouts, no waiting.</p>
+      <a href="#apply" class="btn-clipper-primary">Apply Now &rarr;</a>
+      <a href="blog/how-to-become-a-clipper.html" class="btn-clipper-ghost">Learn the Basics</a>
+    </div>
+  </div>
+
+  <!-- STATS BAR -->
+  <div class="hero-stats-dark">
+    <div class="hero-stat-dark">
+      <div class="hero-stat-num-dark">$0</div>
+      <div class="hero-stat-label-dark">Upfront cost to join</div>
+    </div>
+    <div class="hero-stat-dark">
+      <div class="hero-stat-num-dark">48h</div>
+      <div class="hero-stat-label-dark">Approval turnaround</div>
+    </div>
+    <div class="hero-stat-dark">
+      <div class="hero-stat-num-dark">$4/CPM</div>
+      <div class="hero-stat-label-dark">Top campaign rate</div>
+    </div>
+    <div class="hero-stat-dark">
+      <div class="hero-stat-num-dark">Weekly</div>
+      <div class="hero-stat-label-dark">Payout schedule</div>
+    </div>
+  </div>
+
+  <!-- WHY CLIP -->
+  <div class="earn-section">
+    <div class="section-label">Why Clip on NextWave Clippers</div>
+    <h2 class="section-title reveal">Built for<br /><em>Clippers</em></h2>
+    <div class="earn-grid reveal">
+      <div class="earn-card"><div class="earn-icon">&#128181;</div><div class="earn-title">Performance Pay</div><div class="earn-desc">Earn based on how well your clips perform — not a flat fee. Top clippers earn $3,000–$8,000/month. The better your clips, the more you make.</div></div>
+      <div class="earn-card"><div class="earn-icon">&#128197;</div><div class="earn-title">Weekly Payouts</div><div class="earn-desc">No holding periods. No minimum thresholds. Get paid every Friday for the previous week's verified views. Consistent income, every week.</div></div>
+      <div class="earn-card"><div class="earn-icon">&#127760;</div><div class="earn-title">Work From Anywhere</div><div class="earn-desc">All you need is a laptop and internet. Clip from your bedroom, a coffee shop, or a beach. NextWave Clippers is fully remote, fully async.</div></div>
+      <div class="earn-card"><div class="earn-icon">&#127775;</div><div class="earn-title">Real Brand Campaigns</div><div class="earn-desc">Work with real brands with real budgets — not fake campaigns. Our partners include funded startups, e-commerce brands, podcasters, and creators.</div></div>
+    </div>
+  </div>
+
+  <!-- PHOTO STRIP -->
+  <div style="position:relative;overflow:hidden;height:340px;border-bottom:1px solid var(--border)">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80" alt="Clipper editing videos on laptop" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;opacity:0.55" />
+    <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(8,10,8,0.0) 0%,rgba(8,10,8,0.0) 50%,rgba(8,10,8,0.85) 100%),linear-gradient(rgba(8,10,8,0.3),rgba(8,10,8,0.3));display:flex;align-items:center;justify-content:flex-end;padding:0 48px">
+      <div style="text-align:right">
+        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--lime);margin-bottom:12px">TOP EARNERS</div>
+        <div style="font-family:var(--font-display);font-size:clamp(40px,6vw,80px);font-weight:900;text-transform:uppercase;color:var(--white);line-height:0.88">$8,000<br /><em style="color:var(--lime);font-style:italic">Per Month</em></div>
+        <div style="font-family:var(--font-mono);font-size:13px;color:var(--muted);margin-top:16px">Our top clippers post 30+ clips/week<br />across multiple brand campaigns.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS FOR CLIPPERS -->
+  <div class="process-section">
+    <div class="section-label">Your Journey</div>
+    <h2 class="section-title reveal">From Application<br />to <em>First Payout</em></h2>
+    <div class="process-steps reveal">
+      <div class="process-step">
+        <div class="process-step-num">01</div>
+        <div class="process-step-body">
+          <div class="process-step-title">Apply &amp; Get Approved</div>
+          <div class="process-step-desc">Complete a short onboarding quiz and submit one sample clip. We review within 48 hours. No experience required — just a sharp eye for viral content.</div>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">02</div>
+        <div class="process-step-body">
+          <div class="process-step-title">Browse Live Campaigns</div>
+          <div class="process-step-desc">Access the NextWave Clippers campaign marketplace. Filter by niche, CPM rate, and content type. Pick campaigns you actually understand and want to clip.</div>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">03</div>
+        <div class="process-step-body">
+          <div class="process-step-title">Clip, Edit &amp; Post</div>
+          <div class="process-step-desc">Download the campaign content, find the best moments, edit your clip (CapCut is free and perfect), and post to TikTok, YouTube Shorts, and/or Instagram Reels.</div>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">04</div>
+        <div class="process-step-body">
+          <div class="process-step-title">Track Views &amp; Get Paid</div>
+          <div class="process-step-desc">Submit your clip URL to the campaign dashboard. Views are verified via API within 72 hours. Earnings accumulate in real time and pay out every Friday.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CPM CALCULATOR SECTION -->
+  <div class="cpm-section">
+    <div class="cpm-grid">
+      <div class="reveal">
+        <div class="cpm-calc">
+          <div class="cpm-calc-title">Your Potential Earnings</div>
+          <div class="cpm-row"><div><div class="cpm-views">100,000 views</div><div class="cpm-rate">at $2.00 CPM</div></div><div class="cpm-earn">$200</div></div>
+          <div class="cpm-row"><div><div class="cpm-views">500,000 views</div><div class="cpm-rate">at $2.00 CPM</div></div><div class="cpm-earn">$1,000</div></div>
+          <div class="cpm-row"><div><div class="cpm-views">1,000,000 views</div><div class="cpm-rate">at $2.00 CPM</div></div><div class="cpm-earn">$2,000</div></div>
+          <div class="cpm-row"><div><div class="cpm-views">2,000,000 views</div><div class="cpm-rate">at $2.50 CPM</div></div><div class="cpm-earn">$5,000</div></div>
+          <div style="margin-top:20px;font-family:var(--font-mono);font-size:11px;color:var(--muted)">CPM rates range $1.50–$4.00+ depending on campaign. Views tracked across all platforms combined.</div>
+        </div>
+      </div>
+      <div class="cpm-text reveal reveal-delay-1">
+        <h3>The Math<br /><em>Works</em> in Your<br />Favor</h3>
+        <p>Every clip you post is an earning asset. A clip that gets 200K on TikTok, 80K on Shorts, and 50K on Reels earns on all three simultaneously from a single edit. Multiply that by 10–20 clips per week and you're building real income.</p>
+        <p>Our top clippers post 30+ clips per week across multiple campaigns and earn $4,000–$8,000/month consistently. That's not a fluke — it's math.</p>
+        <a href="blog/how-much-do-clippers-make.html" class="btn-dark">See Real Earnings Data &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- APPLY FORM -->
+  <div class="apply-section" id="apply">
+    <div class="apply-bg">APPLY</div>
+    <div class="apply-inner">
+      <div class="apply-left reveal">
+        <h2>Ready to Start Earning?</h2>
+        <p>Apply below. Approval takes less than 48 hours. Once approved, you can start browsing campaigns and earning on your first clip immediately.</p>
+        <div style="margin-top:32px">
+          <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px">What you'll need</div>
+          <div style="font-family:var(--font-mono);font-size:13px;color:rgba(255,255,255,0.85);line-height:2">&#10003; A computer or smartphone<br />&#10003; CapCut or any editing app<br />&#10003; One sample clip to submit<br />&#10003; Active social media accounts</div>
+        </div>
+      </div>
+      <div class="apply-form reveal reveal-delay-1">
+        <div class="apply-form-title">Clipper Application</div>
+        <form action="https://formspree.io/f/xpqbrqrn" method="POST">
+        <div class="form-field">
+          <label class="form-label">Full Name</label>
+          <input type="text" name="name" class="form-input" placeholder="Your name" required />
+        </div>
+        <div class="form-field">
+          <label class="form-label">Email Address</label>
+          <input type="email" name="email" class="form-input" placeholder="you@email.com" required />
+        </div>
+        <div class="form-field">
+          <label class="form-label">Primary Platform</label>
+          <select name="platform" class="form-input form-select">
+            <option>TikTok</option>
+            <option>YouTube Shorts</option>
+            <option>Instagram Reels</option>
+            <option>All Three</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Your Niche / Content Interest</label>
+          <select name="niche" class="form-input form-select">
+            <option>Gaming / Streaming</option>
+            <option>Finance / Business</option>
+            <option>Fitness / Health</option>
+            <option>Lifestyle / Vlogs</option>
+            <option>Tech / Software</option>
+            <option>Entertainment</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Sample Clip URL (TikTok, YouTube, or IG)</label>
+          <input type="url" name="sample_clip" class="form-input" placeholder="https://..." />
+        </div>
+        <button type="submit" class="form-submit">Submit Application &rarr;</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand"><a href="index.html" class="nav-logo"><img src="logo.png" class="nav-logo-icon" alt="NextWave Clippers" />NEXTWAVE<span>CLIPPERS</span></a><p>The viral video clipping platform connecting brands with creators who clip, post, and earn per view.</p></div>
+      <div><div class="footer-col-title">Platform</div><ul class="footer-links"><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="for-brands.html">For Brands</a></li><li><a href="for-clippers.html">For Clippers</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+      <div><div class="footer-col-title">Blog</div><ul class="footer-links"><li><a href="blog/how-to-become-a-clipper.html">Become a Clipper</a></li><li><a href="blog/how-much-do-clippers-make.html">Clipper Earnings</a></li><li><a href="blog/clipping-side-hustle.html">Side Hustle Guide</a></li><li><a href="blog/best-editing-tools.html">Editing Tools</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="#">Careers</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 <span>NextWave Clippers</span>. All rights reserved.</div>
+      <div class="footer-socials"><a href="#" class="social-link">TikTok</a><a href="#" class="social-link">Instagram</a><a href="#" class="social-link">Twitter / X</a><a href="#" class="social-link">YouTube</a></div>
+    </div>
+  </footer>
+  <script src="shared.js"></script>
+</body>
+</html>

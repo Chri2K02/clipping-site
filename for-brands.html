@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><link rel="icon" type="image/png" href="logo.png" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Brands — NextWave Clippers</title>
+    <meta property="og:type" content="website" />
+  <meta property="og:title" content="For Brands | NextWave Clippers" />
+  <meta property="og:description" content="Go viral without an agency. Launch a short-form video campaign with 2,400+ verified clippers for a fraction of competitor pricing." />
+  <meta property="og:image" content="https://nextwaveclippers.com/logo.png" />
+  <meta property="og:site_name" content="NextWave Clippers" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="For Brands | NextWave Clippers" />
+  <meta name="twitter:description" content="Go viral without an agency. Launch a short-form video campaign with 2,400+ verified clippers for a fraction of competitor pricing." />
+  <meta name="twitter:image" content="https://nextwaveclippers.com/logo.png" />
+  <meta name="description" content="Go viral without an agency. Launch a short-form video campaign with 2,400+ verified clippers for a fraction of competitor pricing." /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,900&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .brand-hero {
+      min-height: 90vh; display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; padding: 120px 48px 80px;
+      position: relative; overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand-hero-bg {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 56px 56px; opacity: 0.35;
+      mask-image: radial-gradient(ellipse 80% 80% at 30% 50%, black 20%, transparent 75%);
+    }
+    .brand-hero-glow {
+      position: absolute; width: 700px; height: 700px;
+      background: radial-gradient(circle, var(--lime-glow) 0%, transparent 70%);
+      top: 50%; left: 30%; transform: translate(-50%,-50%); pointer-events: none;
+    }
+    .brand-hero-left { position: relative; z-index: 2; }
+    .brand-hero-right {
+      position: relative; z-index: 2;
+      display: flex; flex-direction: column; gap: 16px; padding-left: 48px;
+    }
+    .metric-card {
+      background: var(--panel); border: 1px solid var(--border);
+      padding: 28px 32px; display: flex; align-items: center; gap: 24px;
+      transition: border-color 0.3s;
+    }
+    .metric-card:hover { border-color: var(--lime); }
+    .metric-num {
+      font-family: var(--font-display); font-size: 52px; font-weight: 900;
+      color: var(--lime); line-height: 1; flex-shrink: 0;
+    }
+    .metric-label { font-family: var(--font-mono); font-size: 12px; color: var(--muted); line-height: 1.6; }
+    .metric-label strong { display: block; font-family: var(--font-display); font-size: 16px; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 4px; letter-spacing: 0.03em; }
+
+    .how-section { padding: 100px 48px; border-bottom: 1px solid var(--border); }
+    .how-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; margin-top: 64px; border: 1px solid var(--border); }
+    .how-step { padding: 40px 32px; border-right: 1px solid var(--border); position: relative; }
+    .how-step:last-child { border-right: none; }
+    .how-step-num { font-family: var(--font-display); font-size: 72px; font-weight: 900; color: var(--border); line-height: 1; margin-bottom: 20px; }
+    .how-step-title { font-family: var(--font-display); font-size: 20px; font-weight: 800; text-transform: uppercase; color: var(--white); margin-bottom: 10px; letter-spacing: 0.03em; }
+    .how-step p { font-family: var(--font-mono); font-size: 12px; font-weight: 300; color: var(--muted); line-height: 1.85; }
+
+    .features-section { padding: 100px 48px; background: var(--dark); border-bottom: 1px solid var(--border); }
+    .features-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin-top: 64px; border: 1px solid var(--border); }
+    .feature-card { padding: 40px 36px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transition: background 0.3s; }
+    .feature-card:hover { background: var(--panel); }
+    .feature-card:nth-child(3n) { border-right: none; }
+    .feature-card:nth-last-child(-n+3) { border-bottom: none; }
+    .feature-icon { font-size: 28px; margin-bottom: 16px; }
+    .feature-title { font-family: var(--font-display); font-size: 20px; font-weight: 800; text-transform: uppercase; color: var(--white); margin-bottom: 10px; letter-spacing: 0.03em; }
+    .feature-desc { font-family: var(--font-mono); font-size: 12px; font-weight: 300; color: var(--muted); line-height: 1.85; }
+
+    .pricing-cta { padding: 100px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; border-bottom: 1px solid var(--border); }
+    .pricing-cta-price { font-family: var(--font-display); font-size: clamp(80px, 12vw, 160px); font-weight: 900; color: var(--lime); line-height: 0.85; }
+    .pricing-cta-label { font-family: var(--font-mono); font-size: 12px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 12px; }
+    .pricing-cta-right h2 { font-family: var(--font-display); font-size: clamp(36px,5vw,64px); font-weight: 900; text-transform: uppercase; color: var(--white); line-height: 0.92; margin-bottom: 20px; }
+    .pricing-cta-right h2 em { font-style: italic; color: var(--lime); }
+    .pricing-cta-right p { font-family: var(--font-mono); font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.9; margin-bottom: 32px; }
+
+    .testimonials-row { padding: 100px 48px; border-bottom: 1px solid var(--border); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); margin-top: 48px; }
+    .testi-card { background: var(--black); padding: 40px; transition: background 0.3s; }
+    .testi-card:hover { background: var(--panel); }
+    .testi-quote { font-family: var(--font-serif); font-size: 16px; font-style: italic; color: var(--white); line-height: 1.65; margin-bottom: 24px; }
+    .testi-meta { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 13px; font-weight: 900; color: var(--black); flex-shrink: 0; overflow: hidden; }
+    .testi-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .testi-name { font-family: var(--font-display); font-size: 13px; font-weight: 700; text-transform: uppercase; color: var(--white); letter-spacing: 0.04em; }
+    .testi-role { font-family: var(--font-mono); font-size: 10px; color: var(--muted); }
+    .testi-result { margin-left: auto; font-family: var(--font-display); font-size: 16px; font-weight: 900; color: var(--lime); }
+
+    @media(max-width:960px){
+      .brand-hero{grid-template-columns:1fr;padding:100px 20px 60px}
+      .brand-hero-right{padding-left:0;margin-top:40px}
+      .how-grid{grid-template-columns:1fr 1fr}
+      .how-step:nth-child(even){border-right:none}
+      .how-step{border-bottom:1px solid var(--border)}
+      .features-grid{grid-template-columns:1fr}
+      .feature-card{border-right:none!important;border-bottom:1px solid var(--border)!important}
+      .feature-card:last-child{border-bottom:none!important}
+      .pricing-cta{grid-template-columns:1fr;gap:32px;padding:60px 20px}
+      .testi-grid{grid-template-columns:1fr}
+      .how-section,.features-section,.testimonials-row{padding:60px 20px}
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div><div class="cursor-ring" id="cursorRing"></div>
+  <nav>
+    <a href="index.html" class="nav-logo"><img src="logo.png" class="nav-logo-icon" alt="NextWave Clippers" />NEXTWAVE<span>CLIPPERS</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="for-brands.html" class="active">For Brands</a></li>
+      <li><a href="for-clippers.html">For Clippers</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+    </ul>
+    <a href="pricing.html" class="nav-cta">Launch Campaign &rarr;</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="brand-hero">
+    <div class="brand-hero-bg"></div>
+    <div class="brand-hero-glow"></div>
+    <div class="brand-hero-left reveal">
+      <div class="section-label">For Brands</div>
+      <h1 style="font-family:var(--font-display);font-size:clamp(64px,9vw,120px);font-weight:900;text-transform:uppercase;color:var(--white);line-height:0.88;margin-bottom:28px">Your Content.<br /><em style="color:var(--lime);font-style:italic">Everywhere.</em></h1>
+      <p style="font-family:var(--font-mono);font-size:14px;font-weight:300;color:var(--muted);max-width:440px;line-height:1.9;margin-bottom:36px">Launch a campaign on NextWave Clippers and hundreds of verified clippers will turn your long-form content into viral short clips across TikTok, YouTube Shorts, and Instagram Reels. You pay for results — not promises.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <a href="pricing.html" class="btn-primary">Launch for $1,000 &rarr;</a>
+        <a href="#how-it-works" class="btn-ghost">See How It Works</a>
+      </div>
+    </div>
+    <div class="brand-hero-right reveal reveal-delay-2">
+      <div class="metric-card">
+        <div class="metric-num">$1K</div>
+        <div class="metric-label"><strong>Starting Budget</strong>Other platforms charge $5,000+. We start at $1,000 with the same reach.</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">24h</div>
+        <div class="metric-label"><strong>Campaign Live Time</strong>Submit your content. We review and launch within 24 hours.</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">3x</div>
+        <div class="metric-label"><strong>Platform Coverage</strong>TikTok, YouTube Shorts, and Instagram Reels — all from one campaign.</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">0</div>
+        <div class="metric-label"><strong>Wasted Budget</strong>You only pay for verified, real views. Not estimates. Not impressions.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="how-section" id="how-it-works">
+    <div class="section-label">Process</div>
+    <h2 class="section-title reveal">How Brand<br /><em>Campaigns</em> Work</h2>
+    <div class="how-grid reveal">
+      <div class="how-step">
+        <div class="how-step-num">01</div>
+        <div class="how-step-title">Submit Your Content</div>
+        <p>Upload your long-form content — podcast, YouTube video, brand footage, webinar. Set your budget, niche targeting, and campaign duration. Takes 15 minutes.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">02</div>
+        <div class="how-step-title">We Launch in 24hrs</div>
+        <p>Our team reviews your campaign for quality and compliance. Once approved, it's live in our clipper marketplace and hundreds of clippers can start picking it up immediately.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">03</div>
+        <div class="how-step-title">Clippers Get to Work</div>
+        <p>Verified clippers watch your content, identify viral moments, and post optimized clips across TikTok, Shorts, and Reels. All clips link back to your brand or campaign URL.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">04</div>
+        <div class="how-step-title">You See Real Results</div>
+        <p>Track live view counts, platform breakdown, and campaign performance in your dashboard. Pay only for verified views tracked via official APIs — not inflated estimates.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHOTO STRIP -->
+  <div style="position:relative;overflow:hidden;height:360px;border-bottom:1px solid var(--border)">
+    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1600&q=80" alt="Brand marketing team reviewing campaign results" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;opacity:0.6" />
+    <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(8,10,8,0.92) 35%,rgba(8,10,8,0.35));display:flex;align-items:center;padding:0 48px">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--lime);margin-bottom:12px">PLATFORM RESULTS</div>
+        <div style="font-family:var(--font-display);font-size:clamp(40px,6vw,80px);font-weight:900;text-transform:uppercase;color:var(--white);line-height:0.88">10M+ Verified<br /><em style="color:var(--lime);font-style:italic">Views Tracked</em></div>
+        <div style="font-family:var(--font-mono);font-size:13px;color:var(--muted);margin-top:16px;max-width:420px">Real views across TikTok, YouTube Shorts &amp; Instagram Reels — tracked via official APIs, not estimates.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="features-section">
+    <div class="section-label">Why NextWave Clippers</div>
+    <h2 class="section-title reveal">Everything<br /><em>Brands</em> Need</h2>
+    <div class="features-grid reveal">
+      <div class="feature-card"><div class="feature-icon">&#127919;</div><div class="feature-title">Verified View Tracking</div><div class="feature-desc">Real views tracked via YouTube's official API and verified scraping for TikTok and Instagram. No inflated numbers. Every view is real.</div></div>
+      <div class="feature-card"><div class="feature-icon">&#128640;</div><div class="feature-title">24-Hour Launch</div><div class="feature-desc">Submit Monday morning, have clips live Monday night. Our fastest-ever campaign had clippers posting within 4 hours of approval.</div></div>
+      <div class="feature-card"><div class="feature-icon">&#128101;</div><div class="feature-title">2,000+ Verified Clippers</div><div class="feature-desc">Our clipper network is vetted, trained, and active. You don't need to find them — they come to your campaign.</div></div>
+      <div class="feature-card"><div class="feature-icon">&#128202;</div><div class="feature-title">Real-Time Dashboard</div><div class="feature-desc">Watch your campaign's view count climb in real time. See which clips are performing, which platforms are leading, and where to double down.</div></div>
+      <div class="feature-card"><div class="feature-icon">&#128176;</div><div class="feature-title">Performance-Based Pricing</div><div class="feature-desc">Your budget is spent on views — not agency fees, not media buying overhead. If a clip doesn't perform, it costs you nothing beyond the initial campaign budget.</div></div>
+      <div class="feature-card"><div class="feature-icon">&#127775;</div><div class="feature-title">Niche Targeting</div><div class="feature-desc">Target clippers by niche expertise — fitness, finance, gaming, lifestyle, tech. Your campaign gets clippers who actually understand your audience.</div></div>
+    </div>
+  </div>
+
+  <!-- PRICING CTA -->
+  <div class="pricing-cta">
+    <div class="reveal">
+      <div class="pricing-cta-price">$1K</div>
+      <div class="pricing-cta-label">Campaign starting price &mdash; no agency fees</div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <h2>Launch Your<br /><em>First Campaign</em><br />Today</h2>
+      <p>Other platforms charge $5,000 to run a test campaign. We start at $1,000 — with the same clipper network, the same real-time tracking, and the same viral results. Get in, prove ROI, then scale.</p>
+      <a href="pricing.html" class="btn-primary">See All Plans &rarr;</a>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="testimonials-row">
+    <div class="section-label">Brand Results</div>
+    <h2 class="section-title reveal">Brands That<br /><em>Win</em> on NextWave Clippers</h2>
+    <div class="testi-grid reveal">
+      <div class="testi-card"><p class="testi-quote">"$1,000 campaign. 400K views in 4 days. Sold out two product drops. The ROI is unlike anything we've seen from paid ads."</p><div class="testi-meta"><div class="testi-avatar"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=80&q=80" alt="Jordan R." /></div><div><div class="testi-name">Jordan R.</div><div class="testi-role">Founder, Threadhaus</div></div><div class="testi-result">$12K</div></div></div>
+      <div class="testi-card"><p class="testi-quote">"We were paying $8,000/month to an agency and getting worse results. NextWave Clippers gave us 3x the views for a third of the cost."</p><div class="testi-meta"><div class="testi-avatar"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&q=80" alt="Sofia L." /></div><div><div class="testi-name">Sofia L.</div><div class="testi-role">CMO, Voltex</div></div><div class="testi-result">3x reach</div></div></div>
+      <div class="testi-card"><p class="testi-quote">"1M views in under two weeks on a $1,000 campaign. Other platforms quoted us $5,000 for the same thing. Absolute no-brainer."</p><div class="testi-meta"><div class="testi-avatar"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=80&q=80" alt="Diego M." /></div><div><div class="testi-name">Diego M.</div><div class="testi-role">CEO, Meraki</div></div><div class="testi-result">1M views</div></div></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand"><a href="index.html" class="nav-logo"><img src="logo.png" class="nav-logo-icon" alt="NextWave Clippers" />NEXTWAVE<span>CLIPPERS</span></a><p>The viral video clipping platform connecting brands with creators who clip, post, and earn per view.</p></div>
+      <div><div class="footer-col-title">Platform</div><ul class="footer-links"><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="for-brands.html">For Brands</a></li><li><a href="for-clippers.html">For Clippers</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+      <div><div class="footer-col-title">Blog</div><ul class="footer-links"><li><a href="blog/how-to-become-a-clipper.html">Become a Clipper</a></li><li><a href="blog/how-much-do-clippers-make.html">Clipper Earnings</a></li><li><a href="blog/tiktok-guide.html">TikTok Guide</a></li><li><a href="blog/best-editing-tools.html">Editing Tools</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="#">Careers</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 <span>NextWave Clippers</span>. All rights reserved.</div>
+      <div class="footer-socials"><a href="#" class="social-link">TikTok</a><a href="#" class="social-link">Instagram</a><a href="#" class="social-link">Twitter / X</a><a href="#" class="social-link">YouTube</a></div>
+    </div>
+  </footer>
+  <script src="shared.js"></script>
+</body>
+</html>
